@@ -1,7 +1,8 @@
 
+N <- 10000  #input
 count <- 0
 
-for(i in rnorm(100))
+for(i in rnorm(N))
 {
   if(i > -1 & i < 1)
   {
@@ -9,4 +10,4 @@ for(i in rnorm(100))
   }
 }
 
-count
+count / N  #compare with 0.682 or 68.2%
