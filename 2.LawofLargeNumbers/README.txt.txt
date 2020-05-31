@@ -1,0 +1,2 @@
+The purpose of this is exercise is to test the Law of Large Numbers. 
+The Law of Large Numbers : The average of the results obtained from a large number of trials should be close to the expected value and will tend to become closer to the expected value as more trials are performed.
