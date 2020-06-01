@@ -1,1 +1,1 @@
-# R
+This project created to practice R programming. The basics folder consists of small projects implemented by taking random problem statements to get hands on experience.
