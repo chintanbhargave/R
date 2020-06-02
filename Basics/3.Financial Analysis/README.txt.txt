@@ -8,7 +8,7 @@ You have been supplied with two vectors of data : Monthly revenue and monthly ex
 - Profit after tax for each month (the tax rate is 30%)  
 - Profit margin for each month - equals to profit after tax divided by revenue
 - Good months - where the profit after tax was greater than the mean for the year.
-- Bad months - where the profit after tax was less thean the mean for the year
+- Bad months - where the profit after tax was less than the mean for the year
 - The best month - where the profit after tax was max for the year
 - The worst month - where the profit after tax was min for the year  
 
