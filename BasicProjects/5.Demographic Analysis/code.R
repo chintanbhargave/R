@@ -1,4 +1,3 @@
-
 demo<- read.csv("DemographicData.csv", stringsAsFactors = T)
 demo
 
@@ -52,18 +51,39 @@ qplot(data = mdf, x = Internet.users, y = Birth.rate,
       color = Regions, size = I(3),shape = I(19),alpha=I(0.6),
       main = "BirthRate vs InternetUsers")
 
+# Challenge 3
+
+ndf <- read.csv("Data.csv")
+head(ndf)
+
+v1960 <- ndf[ndf$Year==1960,]
+
+v2013 <- ndf[ndf$Year==2013,]
+
+# creating data frames
+
+ndf1960 <- data.frame(Code=Country_Code,Life.Exp=Life_Expectancy_At_Birth_1960)
+
+ndf2013 <- data.frame(Code=Country_Code,Life.Exp=Life_Expectancy_At_Birth_2013)
 
 
+# merging 
+merged1960 <- merge(v1960,ndf1960,by.x = "Country.Code",by.y = "Code")
+
+merged2013 <- merge(v2013,ndf2013,by.x = "Country.Code",by.y = "Code")
 
 
+merged1960$Year <- NULL
+
+merged2013$Year <- NULL
 
 
+# Plot
+qplot(data = merged1960, x= Fertility.Rate, y=Life.Exp ,
+      color = Region,size=I(4), alpha=I(0.6),
+      main = "Life Expectancy vs Fertility(1960)")
 
-
-
-
-
-
-
-
+qplot(data = merged2013, x= Fertility.Rate, y=Life.Exp ,
+      color = Region,size=I(4), alpha=I(0.6),
+      main = "Life Expectancy vs Fertility(2013)")
 
